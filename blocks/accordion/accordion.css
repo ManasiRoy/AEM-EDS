@@ -2,17 +2,18 @@
     border: 1px solid #dadada;
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
-.accordion details + details {
+.accordion details+details {
     margin-top: 24px;
 }
 
 .accordion details p {
     margin-bottom: 0.8em;
 }
+
 .accordion-item-label p {
     color: #fff;
 }
+
 .accordion details summary {
     position: relative;
     padding: 0 16px;
@@ -22,7 +23,7 @@
     overflow: auto;
     transition: background-color 0.2s;
     background: #008c80;
-    border: 1px sol #008c80;
+    border: 1px solid #008c80;
 }
 
 .accordion details[open] summary {
