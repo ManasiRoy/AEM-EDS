@@ -20,14 +20,14 @@ import {
 function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
   const picture = main.querySelector('picture');
-  // eslint-disable-next-line no-bitwise
-  if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
-    const section = document.createElement('div');
-    section.append(buildBlock('hero', { elems: [picture, h1] }));
-    main.prepend(section);
+  const p = h1?.nextElementSibling?.tagName === 'P' ? h1.nextElementSibling : null;
+
+  if (h1 && picture && h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING) {
+    main.prepend(Object.assign(document.createElement('div'), {
+      innerHTML: buildBlock('hero', { elems: [picture, h1, ...(p ? [p] : [])] }).outerHTML
+    }));
   }
 }
-
 /**
  * load fonts.css and set a session storage flag
  */
