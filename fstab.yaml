@@ -1,6 +1,7 @@
 # mountpoints:
   # /: https://drive.google.com/drive/u/0/folders/1mgOTZgEhtYqyE_qG-6Jn28BB09mvc1Mz
   mountpoints:
-  /:
+
+  /: https://drive.google.com/drive/u/0/folders/1mgOTZgEhtYqyE_qG-6Jn28BB09mvc1Mz
     url: https://content.da.live/ManasiRoy/AEM-EDS/
     type: markup
